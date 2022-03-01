@@ -1,0 +1,3 @@
+ErrorDocument 404 http://site.ru/404.html
+RemoveHandler .php .htm .html
+AddHandler application/x-httpd-php .php .htm .html

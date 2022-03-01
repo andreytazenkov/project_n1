@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project N1</title>
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href="./css/vintage-popup.min.css">
+   <link rel="stylesheet" href="./css/popup-material-theme.min.css">
+   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./css/tippy-scale.css">
+   <link rel="stylesheet" href="./css/magnify.css">
+   <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+   <object class="object-hidden" type="image/svg+xml" data="sprite.svg">
+   </object>
+   <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+         <div class="header-container container">
+            <div class="header-logo">
+               <a href="#" class="header-logo__href" tabindex="-1"></a>
+            </div>
+            <button class="header-burger" type="button">
+               <span class="header-burger__span"></span>
+               <span class="header-burger__span"></span>
+               <span class="header-burger__span"></span>
+            </button>
+            <nav class="header-nav">
+               <ul class="header-nav-list">
+                  <li class="header-nav-item"><a href="http://srv174378.hoster-test.ru/test.html" class="header-nav-item__href">Это меню</a></li>
+                  <li class="header-nav-item"><a href="http://srv174378.hoster-test.ru/test.html" class="header-nav-item__href">Должно</a></li>
+                  <li class="header-nav-item"><a href="http://srv174378.hoster-test.ru/test.html" class="header-nav-item__href">Быть</a></li>
+                  <li class="header-nav-item"><a href="http://srv174378.hoster-test.ru/test.html" class="header-nav-item__href">Закрепленным</a></li>
+                  <li class="header-nav-item"><a href="http://srv174378.hoster-test.ru/test.html" class="header-nav-item__href">При скролле</a></li>
+               </ul>
+               <button class="header-nav-close">
+                  <span class="header-nav-close__span"></span>
+               </button>
+            </nav>
+            <button class="header-modal" data-popup-target="modal">МОДАЛКА</button>
+            <div class="header-popup popup" data-popup-id="modal" tabindex="-1" role="dialog">
+               <div class="header-popup-container popup__container">
+                  <div class="header-popup-close popup__close"><span></span><span></span></div>
+                  <div class="header-popup-content popup__content">
+                     <h2 class="header-popup-title popup__title">Жду от Вас приглашения</h2>
+                     <div class="header-popup-body popup__body">
+                        <form class="header-popup-form" action="mail.php" name="header-popup-form" enctype="multipart/form-data" method="POST">
+                           <label class="header-popup-form__label" for="name">Введите Ваше имя, чтобы я мог с Вами поздороваться</label>
+                           <input class="header-popup-form__input" type="text" name="name" id="name" placeholder="Введите Ваше имя" data-validate-field="name" required>
+                           <label class="header-popup-form__label" for="phone">Введите Ваш телефон, чтобы я мог Вам позвонить</label>
+                           <input class="header-popup-form__input" type="tel" name="phone" id="phone" placeholder="Введите Ваш телефон" data-validate-field="tel" data-validate-rules="phone" required>
+                           <button class="header-popup-form__button" type="submit">Давайте пообщаемся</button>
+                           <span class="header-popup-form__span"></span>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="header-popup-send popup" data-popup-id="send" tabindex="-1" role="dialog">
+               <div class="header-popup-send-container popup__container">
+                  <div class="header-popup-send-close popup__close"><span></span><span></span></div>
+                  <div class="header-popup-send-content popup__content">
+                     <h2 class="header-popup-send-title popup__title">КЛАСС!!!</h2>
+                     <span class="header-popup-send-body popup__body"></span>
+                  </div>
+               </div>
+            </div>
+            <button class="header-popup-send-button" data-popup-target="send" tabindex="-1"></button>
+            <div class="header-popup-error popup" data-popup-id="error" tabindex="-1" role="dialog">
+               <div class="header-popup-error-container popup__container">
+                  <div class="header-popup-error-close popup__close"><span></span><span></span></div>
+                  <div class="header-popup-error-content popup__content">
+                     <h2 class="header-popup-error-title popup__title">Попробуй снова...</h2>
+                     <span class="header-popup-error-body popup__body"></span>
+                  </div>
+               </div>
+            </div>
+            <button class="header-popup-error-button" data-popup-target="error" tabindex="-1"></button>
+         </div>
+      </header>
+
+      <main>
+         <div class="header-vector container"></div>
+         <!-- hero -->
+         <section>
+            <div class="hero-container container">
+               <div class="hero-left">
+                  <span class="hero-left-pict"></span>
+                  <h1 class="hero-left-heading">Привет!</h1>
+                  <p class="hero-left-text">Группа компаний Freematiq и MITRA ищет себе клевого верстальщика. На постоянную работу в офисе или периодическую работу по удаленке. Хотим предложить тебе вместо скучных тестовых заданий – сверстать эту страницу.</p>
+                  <h3 class="hero-left-list-heading">В своей работе мы используем:</h3>
+                  <ul class="hero-left-list">
+                     <li class="hero-left-item">HTML5, CSS3</li>
+                     <li class="hero-left-item">Bootstrap 4</li>
+                     <li class="hero-left-item">Jade, Pug</li>
+                     <li class="hero-left-item">Less, SCSS</li>
+                     <li class="hero-left-item">Иконочные шрифты</li>
+                     <li class="hero-left-item">SVG иллюстрации</li>
+                  </ul>
+                  <p class="hero-left-text">Не ограничиваем этими технологиями, верстай как удобно.</p>
+               </div>
+               <div class="hero-right"></div>
+            </div>
+         </section>
+         <!-- first -->
+         <section>
+            <div class="first-container container">
+               <h2 class="first-text">Это твое первое задание в нашей компании. Если оно покажется тебе интересным и его реализация нам понравится – добро пожаловать в команду.</h2>
+               <div class="first-wrapper">
+                  <div class="first-wrapper-left">
+                     <span class="first-wrapper-span">
+                        <svg class="icon">
+                           <use xlink:href="sprite.svg#computer"></use>
+                        </svg></span>
+                     <small class="first-wrapper-text">Первый блок на всю высоту экрана</small>
+                  </div>
+                  <div class="first-wrapper-right">
+                     <span class="first-wrapper-span">
+                        <svg class="icon">
+                           <use xlink:href="sprite.svg#technique"></use>
+                        </svg></span>
+                     <small class="first-wrapper-text">Отзывчивая верстка</small>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- process -->
+         <section>
+            <div class="process-container container">
+               <div class="process-left">
+                  <div class="process-left-pict-1"></div>
+                  <div class="process-left-pict-2"></div>
+               </div>
+               <div class="process-right">
+                  <span class="process-right-span"></span>
+                  <h2 class="process-right-heading">Как ускорить процесс</h2>
+                  <p class="process-right-text">Чтобы иметь доступ ко всем функциям и возможностям Figma, которые облегчат и ускорят процесс верстки, зарегистрируйся и залогинься в системе.</p>
+                  <a class="process-right-button" href="http://srv174378.hoster-test.ru/test.html">Зарегистрироваться</a>
+               </div>
+            </div>
+         </section>
+         <!-- grade -->
+         <section>
+            <div class="grade-container container">
+               <div class="grade-content">
+                  <span class="grade-content__span"></span>
+                  <h2 class="grade-content__heading">Оцени себя</h2>
+                  <p class="grade-content__text">Попробуй максимально объективно и честно оценить свои знания верстки по следующей шкале. И да, её тоже нужно сверстать.</p>
+               </div>
+               <div class="grade-spiner">
+                  <div class="grade-spiner-block">
+                     <span class="grade-spiner-block__svg">
+                        <svg class="icon">
+                           <use xlink:href="sprite.svg#circle"></use>
+                        </svg>
+                     </span>
+                     <h3 class="grade-spiner-block__heading">12</h3>
+                     <p class="grade-spiner-block__text">Лет</p>
+                  </div>
+                  <div class="grade-spiner-block">
+                     <span class="grade-spiner-block__svg">
+                        <svg class="icon">
+                           <use xlink:href="sprite.svg#circle-2"></use>
+                        </svg>
+                     </span>
+                     <h3 class="grade-spiner-block__heading">269</h3>
+                     <p class="grade-spiner-block__text">Проектов</p>
+                  </div>
+               </div>
+               <div class="grade-progress">
+                  <div class="grade-progress-bar-wrapper">
+                     <div class="grade-progress-bar"></div>
+                     <div class="grade-progress-bar-color-wrapper progress-bar">
+                        <div class="grade-progress-bar-color progress" data-percent="100" data-color="transparent"><span class="grade-progress-bar-color__span"></span></div>
+                     </div>
+                  </div>
+                  <button class="grade-progress-button grade-progress-button-1" type="button" data-number="0">Intern</button>
+                  <button class="grade-progress-button" type="button" data-number="1">Junior</button>
+                  <button class="grade-progress-button" type="button" data-number="2">Middle</button>
+                  <button class="grade-progress-button" type="button" data-number="3">Senior</button>
+                  <button class="grade-progress-button" type="button" data-number="4">Lead</button>
+               </div>
+            </div>
+         </section>
+         <!-- product -->
+         <section>
+            <div class="product-container container">
+               <div class="product-row">
+                  <span class="product-pict"></span>
+                  <div class="product-heading">Сверстаешь такой слайдер?</div>
+                  <p class="product-text">Это не так сложно, на самом деле. Сложнее придумать как он будет адаптироваться. Различные модные эффекты так же будут оценены по достоинству.</p>
+                  <div class="product-img"></div>
+               </div>
+               <div class="product-swiper-control">
+                  <div class="product-swiper-control-buttons">
+                     <div class="swiper-button-next product-swiper-button product-swiper-button-next"></div>
+                     <div class="swiper-button-prev product-swiper-button product-swiper-button-prev"></div>
+                  </div>
+                  <div class="swiper-pagination product-swiper-pagination"></div>
+               </div>
+               <div class="product-swiper swiper">
+                  <div class="product-wrapper swiper-wrapper">
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-840-90s.webp" type="image/webp"><img src="./img/New-Balance-840-90s.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 840 90s</h3>
+                              <p class="product-slide-description">840 90s Running объединили в себе спортивную эстетику и необходимый в городском ритме комфорт.</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">10 990 ₽</p>
+                              <small class="product-slide-old-price">12 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-pink" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-pink" data-target="0" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-pink">
+                                 </label>
+                                 <label for="shoes-blue" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-blue" data-target="0" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-blue">
+                                 </label>
+                                 <label for="shoes-orange" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-orange" data-target="0" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-orange">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-1500.webp" type="image/webp"><img src="./img/New-Balance-1500.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 1500</h3>
+                              <p class="product-slide-description">Встречайте новые расцветки бессмертной классики!</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">13 990 ₽</p>
+                              <small class="product-slide-old-price">19 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-crimson" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-crimson" data-target="1" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-crimson">
+                                 </label>
+                                 <label for="shoes-black" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-black" data-target="1" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-black">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-997H.webp" type="image/webp"><img src="./img/New-Balance-997H.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 997H</h3>
+                              <p class="product-slide-description product-slide-description-margin">В 1991 году New Balance представил миру модель 997, которая вывела линейку 99X на совершенно новый уровень технологий и эстетики</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">10 990 ₽</p>
+                              <small class="product-slide-old-price">12 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-violet" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-violet" data-target="2" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-violet">
+                                 </label>
+                                 <label for="shoes-blue-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-blue" data-target="2" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-blue-2">
+                                 </label>
+                                 <label for="shoes-grey" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-grey" data-target="2" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-grey">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-247.webp" type="image/webp"><img src="./img/New-Balance-247.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 247</h3>
+                              <p class="product-slide-description">840 90s Running объединили в себе спортивную эстетику и необходимый в городском ритме комфорт.</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">10 990 ₽</p>
+                              <small class="product-slide-old-price">12 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-pink-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-pink" data-target="3" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-pink-2">
+                                 </label>
+                                 <label for="shoes-blue-3" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-blue" data-target="3" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-blue-3">
+                                 </label>
+                                 <label for="shoes-orange-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-orange" data-target="3" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-orange-2">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-840-90s.webp" type="image/webp"><img src="./img/New-Balance-840-90s.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 840 90s</h3>
+                              <p class="product-slide-description">840 90s Running объединили в себе спортивную эстетику и необходимый в городском ритме комфорт.</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">10 990 ₽</p>
+                              <small class="product-slide-old-price">12 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-pink-3" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-pink" data-target="4" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-pink-3">
+                                 </label>
+                                 <label for="shoes-blue-5" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-blue" data-target="4" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-blue-5">
+                                 </label>
+                                 <label for="shoes-orange-3" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-orange" data-target="4" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-orange-3">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-1500.webp" type="image/webp"><img src="./img/New-Balance-1500.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 1500</h3>
+                              <p class="product-slide-description">Встречайте новые расцветки бессмертной классики!</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">13 990 ₽</p>
+                              <small class="product-slide-old-price">19 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-crimson-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-crimson" data-target="5" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-crimson-2">
+                                 </label>
+                                 <label for="shoes-black-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-black" data-target="5" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-black-2">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-997H.webp" type="image/webp"><img src="./img/New-Balance-997H.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 997H</h3>
+                              <p class="product-slide-description product-slide-description-margin">В 1991 году New Balance представил миру модель 997, которая вывела линейку 99X на совершенно новый уровень технологий и эстетики</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">10 990 ₽</p>
+                              <small class="product-slide-old-price">12 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-violet-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-violet" data-target="6" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-violet-2">
+                                 </label>
+                                 <label for="shoes-blue-4" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-blue" data-target="6" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-blue-4">
+                                 </label>
+                                 <label for="shoes-grey-2" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-grey" data-target="6" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-grey-2">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="product-slide swiper-slide">
+                        <div class="product-slide-img">
+                           <picture>
+                              <source srcset="./img/New-Balance-247.webp" type="image/webp"><img src="./img/New-Balance-247.jpg" alt="shoes">
+                           </picture>
+                           <span class="product-slide-span"></span>
+                        </div>
+                        <span class="product-slide-like">
+                           <svg class="icon">
+                              <use xlink:href="sprite.svg#like"></use>
+                           </svg>
+                        </span>
+                        <div class="product-slide-wrapper">
+                           <div class="product-slide-heading-description">
+                              <h3 class="product-slide-heading">New Balance 247</h3>
+                              <p class="product-slide-description">840 90s Running объединили в себе спортивную эстетику и необходимый в городском ритме комфорт.</p>
+                           </div>
+                           <div class="product-slide-price-color">
+                              <p class="product-slide-price">10 990 ₽</p>
+                              <small class="product-slide-old-price">12 990 ₽</small>
+                              <div class="product-slide-shoes-color">
+                                 <h4 class="product-slide-shoes-color-hame">Цвет:</h4>
+                                 <label for="shoes-pink-4" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-pink" data-target="7" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-pink-4">
+                                 </label>
+                                 <label for="shoes-blue-6" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-blue" data-target="7" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-blue-6">
+                                 </label>
+                                 <label for="shoes-orange-4" class="product-slide-shoes-color-label product-slide-shoes-color-shoes-orange" data-target="7" tabindex="0">
+                                    <input class="product-slide-shoes-color-input" type="checkbox" id="shoes-orange-4">
+                                 </label>
+                                 <button class="product-slide-shoes-color-button" type="button">
+                                    <span class="product-slide-shoes-color-button__span"></span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="product-slide-img-modal-box">
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-840-90s-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-840-90s-modal.jpg" src="./img/New-Balance-840-90s-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-1500-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-1500-modal.jpg" src="./img/New-Balance-1500-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-997H-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-997H-modal.jpg" src="./img/New-Balance-997H-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-247-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-247-modal.jpg" src="./img/New-Balance-247-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-840-90s-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-840-90s-modal.jpg" src="./img/New-Balance-840-90s-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-1500-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-1500-modal.jpg" src="./img/New-Balance-1500-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-997H-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-997H-modal.jpg" src="./img/New-Balance-997H-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product-slide-img-modal-wrapper">
+                     <div class="product-slide-img-modal">
+                        <picture>
+                           <source srcset="./img/New-Balance-247-modal.webp" type="image/webp"><img class="product-slide-img-modal-pict" data-magnify-src="./img/New-Balance-247-modal.jpg" src="./img/New-Balance-247-modal.jpg" alt="shoes">
+                        </picture>
+                        <button class="product-slide-modal-button">
+                           <span class="product-slide-modal-button__close"></span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- table -->
+         <section>
+            <div class="table-container container">
+               <span class="table-pict"></span>
+               <h2 class="table-heading">Время таблиц</h2>
+               <p class="table-text">Какой серьезный проект может обойтись без таблиц? Мы не сомневаемся, что ты умеешь их верстать, попробуй реализовать такую таблицу.</p>
+               <table class="table-box">
+                  <colgroup>
+                     <col>
+                     <col>
+                     <col>
+                     <col>
+                  </colgroup>
+                  <tbody class="table-box-body">
+                     <tr class="table-box-row">
+                        <th class="table-box-head">
+                           <span class="table-box-head-pict"></span>
+                           <p class="table-box-head-heading"></p>
+                           <p class="table-box-head-text"></p>
+                        </th>
+                        <th class="table-box-head">
+                           <span class="table-box-head-pict">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#standart"></use>
+                              </svg>
+                           </span>
+                           <span class="table-box-head-tooltip" id="tooltip-1">i</span>
+                           <p class="table-box-head-heading table-box-head-heading-1">Стандартный</p>
+                           <p class="table-box-head-text table-box-head-text-1">Это самый стандартный тариф, который подойдет для новых пользователей</p>
+                        </th>
+                        <th class="table-box-head">
+                           <span class="table-box-head-pict">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#optima"></use>
+                              </svg>
+                           </span>
+                           <span class="table-box-head-tooltip" id="tooltip-2">i</span>
+                           <p class="table-box-head-heading table-box-head-heading-2">Оптимальный</p>
+                           <p class="table-box-head-text table-box-head-text-transform table-box-head-text-2">Это самый стандартный тариф, который подойдет для новых пользователей</p>
+                        </th>
+                        <th class="table-box-head">
+                           <span class="table-box-head-pict">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#premium"></use>
+                              </svg>
+                           </span>
+                           <span class="table-box-head-tooltip" id="tooltip-3">i</span>
+                           <p class="table-box-head-heading table-box-head-heading-3">Премиум</p>
+                           <p class="table-box-head-text table-box-head-text-3">Это самый стандартный тариф, который подойдет для новых пользователей</p>
+                        </th>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Место на диске</td>
+                        <td class="table-box-info">1 GB</td>
+                        <td class="table-box-info">5 GB</td>
+                        <td class="table-box-info">100 GB</td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Количество проектов</td>
+                        <td class="table-box-info">1</td>
+                        <td class="table-box-info">10</td>
+                        <td class="table-box-info">∞</td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Пользователей в проекте</td>
+                        <td class="table-box-info">2</td>
+                        <td class="table-box-info">5</td>
+                        <td class="table-box-info">∞</td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Интерактивное редактирование</td>
+                        <td class="table-box-info"><span class="table-box-info__space"></span></td>
+                        <td class="table-box-info">
+                           <span class="table-box-info__span"><svg class="icon">
+                                 <use xlink:href="sprite.svg#tick"></use>
+                              </svg>
+                           </span>
+                        </td>
+                        <td class="table-box-info">
+                           <span class="table-box-info__span">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#tick-red"></use>
+                              </svg>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Техническая поддержка (в сутки)</td>
+                        <td class="table-box-info">1 час</td>
+                        <td class="table-box-info">3 часа</td>
+                        <td class="table-box-info">12 часов</td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Премиум ресурсы</td>
+                        <td class="table-box-info"><span class="table-box-info__space"></span></td>
+                        <td class="table-box-info"><span class="table-box-info__space"></span></td>
+                        <td class="table-box-info">
+                           <span class="table-box-info__span">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#tick-red"></use>
+                              </svg>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Отключение рекламы</td>
+                        <td class="table-box-info"><span class="table-box-info__space"></span></td>
+                        <td class="table-box-info">
+                           <span class="table-box-info__span"><svg class="icon">
+                                 <use xlink:href="sprite.svg#tick"></use>
+                              </svg>
+                           </span>
+                        </td>
+                        <td class="table-box-info">
+                           <span class="table-box-info__span">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#tick-red"></use>
+                              </svg>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr class="table-box-row">
+                        <td class="table-box-info">Приложения для iOS и Android</td>
+                        <td class="table-box-info"><span class="table-box-info__space"></span></td>
+                        <td class="table-box-info"><span class="table-box-info__space"></span></td>
+                        <td class="table-box-info">
+                           <span class="table-box-info__span">
+                              <svg class="icon">
+                                 <use xlink:href="sprite.svg#tick-red"></use>
+                              </svg>
+                           </span>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+         <!-- send -->
+         <section>
+            <div class="send-container container">
+               <span class="send-pict"></span>
+               <h2 class="send-heading">Всё готово? Высылай нам!</h2>
+               <p class="send-text">Когда всё будет готово, высылай архив с версткой или ссылку на облачный файл на нашу почту, указав тему письма “Тестовое задание для верстальщиков”.</p>
+               <a class="send-href" href="mailto:hr@freematiq.com" target="_blank">hr@freematiq.com</a>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer-container container">
+            <div class="footer-left">© 2019, Project N1 - Special for you, Все права защищены</div>
+            <div class="footer-right">Сделано во <a class="footer-right__href" href="https://freematiq.com/" target="_blank">Freematiq</a></div>
+         </div>
+      </footer>
+   </div>
+   <script src="./js/jquery.min.js"></script>
+   <script src="./js/vintage-popup.min.js"></script>
+   <script src="./js/inputmask.min.js"></script>
+   <script src="./js/just-validate.min.js"></script>
+   <script src="./js/validate-mail.js"></script>
+   <script src="./js/swiper-bundle.min.js"></script>
+   <script src="./js/swiper.js"></script>
+   <script src="./js/popper.min.js"></script>
+   <script src="./js/tippy-bundle.umd.min.js"></script>
+   <script src="./js/jquery.magnify.js"></script>
+   <script src="./js/script.js"></script>
+
+</body>
+
+</html>

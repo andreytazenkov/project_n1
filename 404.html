@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project N1</title>
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href="./css/vintage-popup.min.css">
+   <link rel="stylesheet" href="./css/popup-material-theme.min.css">
+   <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+   <div class="error-wrapper wrapper">
+      <header class="header error-header">
+         <div class="header-container container">
+            <div class="header-logo">
+               <a href="index.html" class="header-logo__href"></a>
+            </div>
+            <button class="header-burger" type="button">
+               <span class="header-burger__span"></span>
+               <span class="header-burger__span"></span>
+               <span class="header-burger__span"></span>
+            </button>
+            <nav class="header-nav">
+               <ul class="header-nav-list">
+                  <li class="header-nav-item"><a href="#" class="header-nav-item__href">Это меню</a></li>
+                  <li class="header-nav-item"><a href="#" class="header-nav-item__href">Должно</a></li>
+                  <li class="header-nav-item"><a href="#" class="header-nav-item__href">Быть</a></li>
+                  <li class="header-nav-item"><a href="#" class="header-nav-item__href">Закрепленным</a></li>
+                  <li class="header-nav-item"><a href="#" class="header-nav-item__href">При скролле</a></li>
+               </ul>
+               <button class="header-nav-close">
+                  <span class="header-nav-close__span"></span>
+               </button>
+            </nav>
+            <button class="header-modal error-header-modal" data-popup-target="modal">ОТПРАВИТЬ</button>
+            <div class="header-popup popup" data-popup-id="modal" tabindex="-1" role="dialog">
+               <div class="header-popup-container popup__container">
+                  <div class="header-popup-close popup__close"><span></span><span></span></div>
+                  <div class="header-popup-content popup__content">
+                     <h2 class="header-popup-title popup__title">Жду от Вас приглашения</h2>
+                     <div class="header-popup-body popup__body">
+                        <form class="header-popup-form" action="mail.php" name="header-popup-form" enctype="multipart/form-data" method="POST">
+                           <label class="header-popup-form__label" for="name">Введите Ваше имя, чтобы я мог с Вами поздороваться</label>
+                           <input class="header-popup-form__input" type="text" name="name" id="name" placeholder="Введите Ваше имя" data-validate-field="name" required>
+                           <label class="header-popup-form__label" for="phone">Введите Ваш телефон, чтобы я мог Вам позвонить</label>
+                           <input class="header-popup-form__input" type="tel" name="phone" id="phone" placeholder="Введите Ваш телефон" data-validate-field="tel" data-validate-rules="phone" required>
+                           <button class="header-popup-form__button" type="submit">Давайте пообщаемся</button>
+                           <span class="header-popup-form__span"></span>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="header-popup-send popup" data-popup-id="send" tabindex="-1" role="dialog">
+               <div class="header-popup-send-container popup__container">
+                  <div class="header-popup-send-close popup__close"><span></span><span></span></div>
+                  <div class="header-popup-send-content popup__content">
+                     <h2 class="header-popup-send-title popup__title">КЛАСС!!!</h2>
+                     <span class="header-popup-send-body popup__body"></span>
+                  </div>
+               </div>
+            </div>
+            <button class="header-popup-send-button" data-popup-target="send" tabindex="-1"></button>
+            <div class="header-popup-error popup" data-popup-id="error" tabindex="-1" role="dialog">
+               <div class="header-popup-error-container popup__container">
+                  <div class="header-popup-error-close popup__close"><span></span><span></span></div>
+                  <div class="header-popup-error-content popup__content">
+                     <h2 class="header-popup-error-title popup__title">Попробуй снова...</h2>
+                     <span class="header-popup-error-body popup__body"></span>
+                  </div>
+               </div>
+            </div>
+            <button class="header-popup-error-button" data-popup-target="error" tabindex="-1"></button>
+         </div>
+      </header>
+
+      <main>
+         <section>
+            <div class="error-container container">
+               <span class="error-span"></span>
+               <h1 class="error-heading">Страница не найдена</h1>
+               <p class="error-text">К сожалению, такой страницы нет. Либо администратор сайта ее удалил, либо ее никогда не существовало. Попробуйте проверить адрес страницы или начните с Главной.</p>
+               <a href="index.html" class="error-home-href">На главную</a>
+            </div>
+         </section>
+      </main>
+
+      <footer class="footer">
+         <div class="footer-container container">
+            <div class="footer-left">© 2019, Project N1 - Special for you, Все права защищены</div>
+            <div class="footer-right">Сделано во <a class="footer-right__href" href="https://freematiq.com/" target="_blank">Freematiq</a></div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="./js/jquery.min.js"></script>
+   <script src="./js/vintage-popup.min.js"></script>
+   <script src="./js/inputmask.min.js"></script>
+   <script src="./js/just-validate.min.js"></script>
+   <script src="./js/validate-mail.js"></script>
+   <script src="./js/swiper-bundle.min.js"></script>
+   <script src="./js/swiper.js"></script>
+   <script src="./js/popper.min.js"></script>
+   <script src="./js/tippy-bundle.umd.min.js"></script>
+   <script src="./js/jquery.magnify.js"></script>
+   <script src="./js/script-error.js"></script>
+</body>
+
+</html>
